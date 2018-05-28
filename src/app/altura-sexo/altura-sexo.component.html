@@ -1,0 +1,40 @@
+<h4>Altura & Sexo</h4>
+<form>
+    <mat-form-field >
+        <input type="number" matInput placeholder="Informe Altura" [(ngModel)]="altura" name="altura">
+      </mat-form-field>
+    <br>
+    <label>Sexo</label>
+    <br>
+    <mat-radio-group [(ngModel)]="sexo" name="sexo">
+      <mat-radio-button value="M">Masculino</mat-radio-button>
+      <br>
+      <mat-radio-button value="F">Feminino</mat-radio-button>
+    </mat-radio-group>
+    <br>
+    <br>
+    <button mat-raised-button color="accent" type="button" (click)="inserirValores()" [disabled]="qtd == 0">Inserir</button>
+    <br>
+    <br>
+    <span>Voce pode inserir {{qtd}} informacoes.</span>
+    <br>
+    <br>
+    <div>
+        <table class="mat-elevation-z8">
+          <thead>
+            <tr>
+              <th>Qtd. Homens</th>
+              <th>Qtd. Mulheres</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{qtdHomens}}</td>
+              <td>{{qtdMulheres}}</td>
+            </tr>            
+          </tbody>
+          </table>
+          <br>
+          <span>A maior e {{maiorAltura}} que do sexo {{sexoMaiorAltura}}</span>
+    </div>
+</form>

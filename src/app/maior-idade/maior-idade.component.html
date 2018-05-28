@@ -1,0 +1,26 @@
+<h4>Maior idade</h4>
+<br>
+<form>
+    <mat-form-field>
+        <input type="number" matInput placeholder="Informe Idade" [(ngModel)]="idade" name="idade">
+    </mat-form-field>
+    <button mat-raised-button color="accent" type="button" (click)="maiorIdade()">Inserir</button>
+    <br>
+    <br>
+    <div>
+        <table class="mat-elevation-z8">
+          <thead>
+            <tr>
+              <th>Maiores de Idade</th>
+              <th>Menores de Idade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{qtdMaiores}}</td>
+              <td>{{qtdMenores}}</td>
+            </tr>            
+          </tbody>
+        </table>
+    </div>
+</form>

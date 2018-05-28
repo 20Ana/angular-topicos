@@ -1,0 +1,27 @@
+<h4>Quadrado do numero</h4>
+<br>
+<form>
+    <mat-form-field>
+        <input type="number" matInput placeholder="Informe Numero" [(ngModel)]="numero" name="numero">
+    </mat-form-field>
+    <button mat-raised-button color="accent" type="button" (click)="inserirNumero()" [disabled]="qtd == 0">Inserir</button>
+    <br>
+    <br>
+    <h5>Quadrado dos numeros</h5>
+    <div >
+        <table class="mat-elevation-z8">
+          <thead>
+            <tr>
+              <th>Inserido</th>
+              <th>Quadrado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of numeros">
+              <td>{{item.valorInserido}}</td>
+              <td>{{item.quadrado}}</td>
+            </tr>            
+          </tbody>
+          </table>
+    </div>
+</form>

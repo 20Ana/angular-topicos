@@ -1,0 +1,16 @@
+<h4>Split Data</h4>
+<br>
+<form>
+    <mat-form-field>
+        <input type="date" matInput placeholder="Data" [(ngModel)]="date" name="date">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="accent" type="button" (click)="splitData()">Split</button>
+    <br>
+    <br>
+    <span>Dia: {{res[2]}}</span>
+    <br>
+    <span>Mes: {{res[1]}}</span>
+    <br>
+    <span>Ano: {{res[0]}}</span>
+</form>
